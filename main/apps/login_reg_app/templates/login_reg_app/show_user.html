@@ -1,0 +1,60 @@
+﻿﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>show.html</title>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <style type="text/css">
+      #submit-button {
+        background-color: red;
+        color: white;
+        width: 50%;
+        margin-left: 49%;
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, .5);
+      }
+
+      #author {
+        border-color: black;
+        width: 50%;
+        float: right;
+      }
+    </style>
+  </head>
+  <!-- ===================================================================== -->
+  <body>
+    <a href="/">Home</a>
+
+    <h2>ID: {{book.id}}</h2>
+    <h2>Title: {{book.title}}</h2>
+    <h3>Description: {{book.description}}</h3>
+
+    <h3>(Co-)Authors: </h3>
+    {% for co_author in co_authors %}
+    <ol>
+      <li>{{ co_author.name }}</li>
+    </ol>
+    {% endfor %}
+
+    <form action='/books/assign_author/{{book.id}}' method='post'>
+    {% csrf_token %}
+
+      <!-- Drop-down menu -->
+      <div class="form-group">
+        <label for="author">Add Author: </label>
+        <select name="author" id="author" class="form-control">
+
+          {% for author in authors %}
+            <option value={{author.id}}>{{author.name}}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <!-- submit-button -->
+      <input type='submit' id="submit-button" value='Submit!' class="form-control"
+        class="shadow-lg p-3 mb-5 bg-white rounded">
+    </form>
+
+  </body>
+</html>
