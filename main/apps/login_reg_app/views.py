@@ -9,15 +9,11 @@ def get_all_users_info():
 # ======================================================================================================================
 # ======================================================================================================================
 # ======================================================================================================================
-def index(request):
+def root(request):
   # Initialize session
   if 'user_logged_in' not in request.session:
     request.session['user_logged_in'] = {}
-  return redirect("/users")
-# ======================================================================================================================
-def users(request):
-  users = get_all_users_info()
-  return render(request, "login_reg_app/index.html", users)
+  return redirect("/users/reg_login")
 # ======================================================================================================================
 def reg_login(request):
   return render(request, "login_reg_app/reg_login.html")

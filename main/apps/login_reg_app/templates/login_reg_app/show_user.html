@@ -24,21 +24,21 @@
   </head>
   <!-- ===================================================================== -->
   <body>
-    <a href="/">Home</a>
 
-    <!--If user is logged in then display ndessage -->
-    {% if request.session.user_logged_in.logged_in == True %}
-        <h1>You are logged in {{request.session.user_logged_in.first_name}}!</h1>
-    {% endif %}
+      <!--If user is logged in then display ndessage -->
+      {% if request.session.user_logged_in.logged_in == True %}
+          <h1>You are logged in {{request.session.user_logged_in.first_name}}!</h1>
+          <a href="/users/logout">Logout</a>
+      {% endif %}
 
-    <h2>ID: {{user.id}}</h2>
-    <h2>First Name: {{user.first_name}}</h2>
-    <h2>Last Name:  {{user.last_name}}</h2>
-    <h3>Email: {{user.email}}</h3>
-    <!--<h3>Logged-In: {{user.logged_in}}</h3>-->
+      <h2>ID: {{user.id}}</h2>
+      <h2>First Name: {{user.first_name}}</h2>
+      <h2>Last Name:  {{user.last_name}}</h2>
+      <h3>Email: {{user.email}}</h3>
+      <!--<h3>Logged-In: {{user.logged_in}}</h3>-->
 
-    <!--TODO: Only allow logout if already logged in -->
-    <a href="/users/logout">Log-out</a>
+      <!--TODO: Only allow logout if already logged in -->
+      <a href="/users/logout">Log-out</a>
 
   </body>
 </html>

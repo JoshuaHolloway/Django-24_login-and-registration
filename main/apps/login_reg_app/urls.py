@@ -2,13 +2,9 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    # 0. Root
-    url(r'^$', views.index),
+    # 1. Root
+    url(r'^$', views.root),
 
-    # 1. Show table
-    url(r'^users$', views.users),
-
-    # TODO:
     # 2. Show row
     url(r'^users/(?P<user_id>\d+)$', views.users_showUser),  # localhost:8000/shows/<id>
 
@@ -17,8 +13,4 @@ urlpatterns = [
     url(r'^users/reg', views.register),
     url(r'^users/login', views.login),
     url(r'^users/logout', views.logout),
-
-    # TODO:
-    # 4. Edit
-    # 5. Delete
 ]
