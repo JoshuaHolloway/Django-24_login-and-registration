@@ -9,7 +9,6 @@ def get_all_users_info():
   return {'users': Users.objects.all()}
 # ======================================================================================================================
 # ======================================================================================================================
-# ======================================================================================================================
 def root(request):
   # Initialize session
   if 'user_logged_in' not in request.session:
@@ -53,7 +52,6 @@ def register(request):
     last_name = request.POST['last_name']
     email = request.POST['email']
     password_orig = request.POST['password']
-    # logged_in = 0
 
     # Hash Password
     password_hash = bcrypt.hashpw(password_orig.encode(), bcrypt.gensalt())
@@ -64,7 +62,6 @@ def register(request):
       last_name=last_name,
       email=email,
       password_hash=password_hash)
-      #logged_in=logged_in)
 
     messages.success(request, "Successfully registered")
     return redirect("/users/reg_login")
