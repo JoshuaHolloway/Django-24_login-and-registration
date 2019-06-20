@@ -1,4 +1,5 @@
 from django.shortcuts import render, HttpResponse, redirect
+from django.contrib import messages
 from .models import Users
 # ======================================================================================================================
 def get_user_info(user_id):
@@ -18,34 +19,59 @@ def root(request):
 def reg_login(request):
   return render(request, "login_reg_app/reg_login.html")
 # ======================================================================================================================
+def validate(request):
+
+  # Return true if no errors
+  valid = False
+
+  # pass the post data to the method we wrote and save the response in a variable called errors
+  errors = Users.objects.basic_validator(request.POST)
+
+  # check if the errors dictionary has anything in it
+  if len(errors) > 0:
+
+    # if the errors dictionary contains anything, loop through each key-value pair and make a flash message
+    for key, value in errors.items():
+      messages.error(request, value)
+
+    # Errors found
+    return valid
+
+  else:
+    # No erros => Valid
+    valid = True
+    return valid
+
 # ======================================================================================================================
 def register(request):
 
-  # TODO: Apply validation
-  #  -Do passwords match?
-  #  -Does name contain numbers?
-  #  -Is name at least one char?
-  #  -Does email have proper form?
+  valid = validate(request)
+  if valid:
+    #  TODO Validation: Does second password match first?
 
-  # Grab values from form
-  first_name = request.POST['first_name']
-  last_name = request.POST['last_name']
-  email = request.POST['email']
-  password_orig = request.POST['password']
-  # logged_in = 0
+    # Grab values from form
+    first_name = request.POST['first_name']
+    last_name = request.POST['last_name']
+    email = request.POST['email']
+    password_orig = request.POST['password']
+    # logged_in = 0
 
-  # Hash Password
-  password_hash = bcrypt.hashpw(password_orig.encode(), bcrypt.gensalt())
+    # Hash Password
+    password_hash = bcrypt.hashpw(password_orig.encode(), bcrypt.gensalt())
 
-  # Create row in database
-  user = Users.objects.create(
-    first_name=first_name,
-    last_name=last_name,
-    email=email,
-    password_hash=password_hash)
-    #logged_in=logged_in)
+    # Create row in database
+    user = Users.objects.create(
+      first_name=first_name,
+      last_name=last_name,
+      email=email,
+      password_hash=password_hash)
+      #logged_in=logged_in)
 
-  return redirect("/users")
+    messages.success(request, "Successfully registered")
+    return redirect("/users")
+  else: # not-valid
+    # redirect the user back to the form to fix the errors
+    return redirect("/users/reg_login")
 # ======================================================================================================================
 # TODO: Show
 def users_showUser(request, user_id):
