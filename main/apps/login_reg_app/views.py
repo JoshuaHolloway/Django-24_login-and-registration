@@ -10,6 +10,9 @@ def get_all_users_info():
 # ======================================================================================================================
 # ======================================================================================================================
 def index(request):
+  # Initialize session
+  if 'user_logged_in' not in request.session:
+    request.session['user_logged_in'] = {}
   return redirect("/users")
 # ======================================================================================================================
 def users(request):
@@ -48,6 +51,7 @@ def register(request):
 
   return redirect("/users")
 # ======================================================================================================================
+# TODO: Show
 def users_showUser(request, user_id):
   return render(request, "login_reg_app/show_user.html", get_user_info(user_id))
 # ======================================================================================================================
@@ -66,7 +70,13 @@ def login(request):
     print("password match")
 
     # TODO: Change logged_in field in database to True
+
     # TODO: Set Session with logged-in users info
+    request.session['user_logged_in'] = {
+      'id': user.id,
+      'first_name': user.first_name,
+      'logged_in': True
+    }
 
     return render(request, "login_reg_app/logged_in.html", {'user': user})
   else:
@@ -74,4 +84,12 @@ def login(request):
     return HttpResponse("You Loose!")
 
   return 0
+# ======================================================================================================================
+def logout(request):
+
+  # TODO: Set logged_in to false in database
+
+  # Pop session['user_logged_in']
+  request.session.pop('user_logged_in')
+  return redirect("/")
 # ======================================================================================================================

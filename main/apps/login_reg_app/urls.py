@@ -16,6 +16,7 @@ urlpatterns = [
     url(r'^users/reg_login', views.reg_login),
     url(r'^users/reg', views.register),
     url(r'^users/login', views.login),
+    url(r'^users/logout', views.logout),
 
     # TODO:
     # 4. Edit
