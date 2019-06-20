@@ -1,11 +1,9 @@
 from django.db import models
 import re # regex module
 
-# Our custom manager!
-# No methods in our new manager should ever receive the whole request object as an argument!
-# (just parts, like request.POST)
+# Custom manager for validation
 class UsersManager(models.Manager):
-    def basic_validator(self, postData):
+    def basic_validator(self, postData, users):
 
       # Validation 1: Does name contain numbers?
       def hasNumbers(inputString):  # https://stackoverflow.com/a/19859308
@@ -27,11 +25,19 @@ class UsersManager(models.Manager):
       if not EMAIL_REGEX.match(postData['email']):  # test whether a field matches the pattern
         errors["email"] = "email does not have proper form"
 
+      # Validation 4: Does second password match first?
+      if(postData['password'] != postData['password-confirm']):
+        errors["password"] = "Password entered does not match confirmation"
+
+      # Validation 5: Ensure email is not already in database
+      for user in users:
+        if user.email == postData["email"]:
+          errors["email_in_db"] = "Already registered!"
+          break
+
       return errors
-
-
-
-# Create your models here.
+# ======================================================================================================================
+# Table-1:
 class Users(models.Model):
   #id
   first_name = models.CharField(max_length=32)

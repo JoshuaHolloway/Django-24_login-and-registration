@@ -25,7 +25,7 @@ def validate(request):
   valid = False
 
   # pass the post data to the method we wrote and save the response in a variable called errors
-  errors = Users.objects.basic_validator(request.POST)
+  errors = Users.objects.basic_validator(request.POST, Users.objects.all())
 
   # check if the errors dictionary has anything in it
   if len(errors) > 0:
@@ -47,7 +47,6 @@ def register(request):
 
   valid = validate(request)
   if valid:
-    #  TODO Validation: Does second password match first?
 
     # Grab values from form
     first_name = request.POST['first_name']
@@ -68,7 +67,7 @@ def register(request):
       #logged_in=logged_in)
 
     messages.success(request, "Successfully registered")
-    return redirect("/users")
+    return redirect("/users/reg_login")
   else: # not-valid
     # redirect the user back to the form to fix the errors
     return redirect("/users/reg_login")
@@ -91,10 +90,6 @@ def login(request):
   if bcrypt.checkpw(password_login.encode(), user.password_hash.encode()):
     print("password match")
 
-    # # Change logged_in field in database to True
-    # user.logged_in = 1
-    # user.save()
-
     # Set Session with logged-in users info
     request.session['user_logged_in'] = {
       'id': user.id,
@@ -110,13 +105,6 @@ def login(request):
   return 0
 # ======================================================================================================================
 def logout(request):
-
-  # # Set logged-in to false in database
-  # user = get_user_info(id)
-  # user.logged_in = 0
-  # user.save()
-
-  # Pop session['user_logged_in']
   request.session.pop('user_logged_in')
   return redirect("/")
 # ======================================================================================================================
