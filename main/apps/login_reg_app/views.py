@@ -21,24 +21,30 @@ def reg_login(request):
 # ======================================================================================================================
 # ======================================================================================================================
 def register(request):
-  debug = 0
-  # TODO: Press register button on reg_login.html
-  #  (following strategy from the Flask version)
-  #  (specifically the POST version)
-  # TODO: -Step 1: Link to "/users/new"
-  # TODO: -Step 2: From urls.py jump to users() in views.py
-  # TODO: -Step 3: FUTURE-TODO: Apply validation
-  # TODO: -Step 4: Query into the db to create new user
-  #       -Follow the pattern used in past few Django projects
-  #       -Follow Django patter from here on.
 
+  # TODO: Apply validation
+  #  -Do passwords match?
+  #  -Does name contain numbers?
+  #  -Is name at least one char?
+  #  -Does email have proper form?
+
+  # Grab values from form
   first_name = request.POST['first_name']
   last_name = request.POST['last_name']
-  # email = request.POST['email']
+  email = request.POST['email']
+  password_orig = request.POST['password']
+  logged_in = 0
 
+  # Hash Password
+  password_hash = bcrypt.hashpw(password_orig.encode(), bcrypt.gensalt())
+
+  # Create row in database
   user = Users.objects.create(
     first_name=first_name,
-    last_name=last_name)
+    last_name=last_name,
+    email=email,
+    password_hash=password_hash,
+    logged_in=logged_in)
 
   return redirect("/users")
 # ======================================================================================================================
@@ -46,8 +52,14 @@ def users_showUser(request, user_id):
   return render(request, "login_reg_app/show_user.html", get_user_info(user_id))
 # ======================================================================================================================
 import bcrypt
+def validate_login(request):
+  user = Users.objects.get(email=request.POST['email'])  # hm...is it really a good idea to use the get method here?
+  if bcrypt.checkpw(request.POST['password'].encode(), user.pw_hash.encode()):
+    print("password match")
+  else:
+    print("failed password")
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 def login(request):
-
   password_orig = 'test'
   password_hash = bcrypt.hashpw(password_orig.encode(), bcrypt.gensalt())
   password_test = 'test'

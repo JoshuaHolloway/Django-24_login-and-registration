@@ -3,10 +3,11 @@ from django.db import models
 # Create your models here.
 class Users(models.Model):
   #id
-  first_name = models.CharField(max_length=255)
-  last_name = models.CharField(max_length=255)
-  email = models.CharField(max_length=255)
-  # TODO: Store password hash
+  first_name = models.CharField(max_length=32)
+  last_name = models.CharField(max_length=32)
+  email = models.CharField(max_length=64)
+  password_hash = models.CharField(max_length=128)
+  logged_in = models.IntegerField()
   created_at = models.DateTimeField(auto_now_add=True)
   updated_at = models.DateTimeField(auto_now=True)
 
