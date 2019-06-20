@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>show.html</title>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     <style type="text/css">
       #submit-button {
@@ -26,16 +26,10 @@
   <body>
     <a href="/">Home</a>
 
-    <h2>ID: {{book.id}}</h2>
-    <h2>Title: {{book.title}}</h2>
-    <h3>Description: {{book.description}}</h3>
-
-    <h3>(Co-)Authors: </h3>
-    {% for co_author in co_authors %}
-    <ol>
-      <li>{{ co_author.name }}</li>
-    </ol>
-    {% endfor %}
+    <h2>ID: {{user.id}}</h2>
+    <h2>First Name: {{user.first_name}}</h2>
+    <h2>Last Name:  {{user.last_name}}</h2>
+    <h3>Email: {{user.email}}</h3>
 
     <form action='/books/assign_author/{{book.id}}' method='post'>
     {% csrf_token %}
