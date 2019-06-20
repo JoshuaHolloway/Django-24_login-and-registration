@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb8b18f6-d7b8-4490-b2b5-e8353c46d34f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/apps/login_reg_app/templates/login_reg_app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/apps/login_reg_app/templates/login_reg_app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/apps/login_reg_app/templates/login_reg_app/new.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/apps/login_reg_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/apps/login_reg_app/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/apps/login_reg_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/apps/login_reg_app/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="fb8b18f6-d7b8-4490-b2b5-e8353c46d34f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +48,7 @@
                 <entry file="file://$PROJECT_DIR$/main/apps/login_reg_app/views.py">
                   <provider selected="true" editor-type-id="text-editor">
                     <state relative-caret-position="107">
-                      <caret line="8" selection-start-line="8" selection-end-line="8" />
+                      <caret line="8" column="42" lean-forward="true" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
                     </state>
                   </provider>
                 </entry>
@@ -280,13 +274,13 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4984472" weight="0.32952815" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4984472" visible="true" weight="0.39954337" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4984472" weight="0.39954337" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4994824" weight="0.32952815" />
-      <window_info anchor="bottom" content_ui="combo" id="Project" order="9" sideWeight="0.5015528" side_tool="true" visible="true" weight="0.39954337" />
+      <window_info anchor="bottom" content_ui="combo" id="Project" order="9" sideWeight="0.5015528" side_tool="true" visible="true" weight="0.32952815" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -392,17 +386,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/apps/login_reg_app/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/apps/login_reg_app/templates/login_reg_app/reg_login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
           <caret line="123" column="43" selection-start-line="123" selection-start-column="43" selection-end-line="123" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/apps/login_reg_app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="8" column="42" lean-forward="true" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
         </state>
       </provider>
     </entry>
