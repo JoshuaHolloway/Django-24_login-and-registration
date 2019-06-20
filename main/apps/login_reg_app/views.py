@@ -52,17 +52,26 @@ def users_showUser(request, user_id):
   return render(request, "login_reg_app/show_user.html", get_user_info(user_id))
 # ======================================================================================================================
 import bcrypt
-def validate_login(request):
-  user = Users.objects.get(email=request.POST['email'])  # hm...is it really a good idea to use the get method here?
-  if bcrypt.checkpw(request.POST['password'].encode(), user.pw_hash.encode()):
+def login(request):
+
+  # Grab email from form
+  email = request.POST['email-login']
+
+  # Grab row from database
+  user = Users.objects.get(email=email)
+
+  # Grab entered password and test against stored hash
+  password_login = request.POST['password-login']
+  if bcrypt.checkpw(password_login.encode(), user.password_hash.encode()):
     print("password match")
+
+    # TODO: Change logged_in field in database to True
+    # TODO: Set Session with logged-in users info
+
+    return render(request, "login_reg_app/logged_in.html", {'user': user})
   else:
     print("failed password")
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-def login(request):
-  password_orig = 'test'
-  password_hash = bcrypt.hashpw(password_orig.encode(), bcrypt.gensalt())
-  password_test = 'test'
-  is_valid = bcrypt.checkpw(password_test.encode(), password_hash)
+    return HttpResponse("You Loose!")
+
   return 0
 # ======================================================================================================================
