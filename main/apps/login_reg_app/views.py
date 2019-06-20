@@ -20,7 +20,7 @@ def reg_login(request):
   return render(request, "login_reg_app/reg_login.html")
 # ======================================================================================================================
 # ======================================================================================================================
-def debug(request):
+def register(request):
   debug = 0
   # TODO: Press register button on reg_login.html
   #  (following strategy from the Flask version)
@@ -46,7 +46,7 @@ def users_showUser(request, user_id):
   return render(request, "login_reg_app/show_user.html", get_user_info(user_id))
 # ======================================================================================================================
 import bcrypt
-def password_hashing(request):
+def login(request):
 
   password_orig = 'test'
   password_hash = bcrypt.hashpw(password_orig.encode(), bcrypt.gensalt())
