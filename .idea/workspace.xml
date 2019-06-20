@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb8b18f6-d7b8-4490-b2b5-e8353c46d34f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/apps/login_reg_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/apps/login_reg_app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/apps/login_reg_app/templates/login_reg_app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/apps/login_reg_app/templates/login_reg_app/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/apps/login_reg_app/templates/login_reg_app/logged_in.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/apps/login_reg_app/templates/login_reg_app/logged_in.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/apps/login_reg_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/apps/login_reg_app/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/apps/login_reg_app/templates/login_reg_app/reg_login.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/apps/login_reg_app/templates/login_reg_app/reg_login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/apps/login_reg_app/templates/login_reg_app/show_user.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/apps/login_reg_app/templates/login_reg_app/show_user.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/apps/login_reg_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/apps/login_reg_app/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,15 +23,20 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/main/apps/login_reg_app/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="494">
-                  <caret line="93" column="20" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="20" />
+                <state relative-caret-position="228">
+                  <caret line="71" column="50" lean-forward="true" selection-start-line="71" selection-start-column="50" selection-end-line="71" selection-end-column="50" />
                   <folding>
-                    <element signature="e#237#283#0" />
                     <element signature="e#432#469#0" />
-                    <element signature="e#1024#1112#0" />
-                    <element signature="e#1260#1314#0" />
-                    <element signature="e#2430#2508#0" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://C:/Apps/Anaconda3/Lib/site-packages/django/core/handlers/base.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="3960">
+                  <caret line="184" selection-start-line="184" selection-end-line="184" />
                 </state>
               </provider>
             </entry>
@@ -38,11 +47,11 @@
         <splitter split-orientation="vertical" split-proportion="0.6542056">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file pinned="false" current-in-tab="true">
+              <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/main/apps/login_reg_app/templates/login_reg_app/logged_in.html">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="242">
-                      <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+                    <state relative-caret-position="98">
+                      <caret line="17" selection-start-line="17" selection-end-line="20" selection-end-column="15" />
                       <folding>
                         <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
                       </folding>
@@ -53,8 +62,8 @@
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/main/apps/login_reg_app/templates/login_reg_app/index.html">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="280">
-                      <caret line="21" column="38" lean-forward="true" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+                    <state relative-caret-position="192">
+                      <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
                     </state>
                   </provider>
                 </entry>
@@ -62,8 +71,8 @@
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/main/apps/login_reg_app/templates/login_reg_app/show_user.html">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="624">
-                      <caret line="40" selection-start-line="40" selection-end-line="40" />
+                    <state relative-caret-position="120">
+                      <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
                       <folding>
                         <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
                       </folding>
@@ -71,11 +80,11 @@
                   </provider>
                 </entry>
               </file>
-              <file pinned="false" current-in-tab="false">
+              <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/main/apps/login_reg_app/templates/login_reg_app/reg_login.html">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="438">
-                      <caret line="130" column="46" lean-forward="true" selection-start-line="130" selection-start-column="32" selection-end-line="130" selection-end-column="46" />
+                    <state relative-caret-position="152">
+                      <caret line="80" column="67" lean-forward="true" selection-start-line="80" selection-start-column="67" selection-end-line="80" selection-end-column="67" />
                     </state>
                   </provider>
                 </entry>
@@ -88,8 +97,8 @@
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/main/apps/login_reg_app/models.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="312">
-                      <caret line="13" column="21" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+                    <state relative-caret-position="216">
+                      <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="37" />
                     </state>
                   </provider>
                 </entry>
@@ -97,12 +106,12 @@
             </leaf>
           </split-first>
           <split-second>
-            <leaf>
+            <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/main/apps/login_reg_app/urls.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="98">
-                      <caret line="18" column="16" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="16" />
+                    <state relative-caret-position="96">
+                      <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
                       <folding>
                         <element signature="e#0#32#0" expanded="true" />
                       </folding>
@@ -133,22 +142,22 @@
         <option value="$PROJECT_DIR$/main/login_reg_proj/settings.py" />
         <option value="$PROJECT_DIR$/main/apps/login_reg_app/templates/index.html" />
         <option value="$PROJECT_DIR$/main/login_reg_proj/urls.py" />
-        <option value="$PROJECT_DIR$/main/apps/login_reg_app/templates/login_reg_app/show_user.html" />
         <option value="$PROJECT_DIR$/main/apps/login_reg_app/templates/login_reg_app/new.html" />
-        <option value="$PROJECT_DIR$/main/apps/login_reg_app/templates/login_reg_app/index.html" />
-        <option value="$PROJECT_DIR$/main/apps/login_reg_app/templates/login_reg_app/reg_login.html" />
-        <option value="$PROJECT_DIR$/main/apps/login_reg_app/models.py" />
         <option value="$PROJECT_DIR$/main/apps/login_reg_app/urls.py" />
-        <option value="$PROJECT_DIR$/main/apps/login_reg_app/templates/login_reg_app/logged_in.html" />
+        <option value="$PROJECT_DIR$/main/apps/login_reg_app/models.py" />
         <option value="$PROJECT_DIR$/main/apps/login_reg_app/views.py" />
+        <option value="$PROJECT_DIR$/main/apps/login_reg_app/templates/login_reg_app/logged_in.html" />
+        <option value="$PROJECT_DIR$/main/apps/login_reg_app/templates/login_reg_app/index.html" />
+        <option value="$PROJECT_DIR$/main/apps/login_reg_app/templates/login_reg_app/show_user.html" />
+        <option value="$PROJECT_DIR$/main/apps/login_reg_app/templates/login_reg_app/reg_login.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2171" />
-    <option name="y" value="-20" />
-    <option name="width" value="1198" />
-    <option name="height" value="1005" />
+    <option name="x" value="2170" />
+    <option name="y" value="-22" />
+    <option name="width" value="1199" />
+    <option name="height" value="1006" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -158,6 +167,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -204,7 +214,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -274,14 +283,14 @@
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49667037" weight="0.22528736" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.6764706" visible="true" weight="0.16781609" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49500555" visible="true" weight="0.22528736" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.67591566" weight="0.3873563" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49833518" weight="0.32873562" />
-      <window_info anchor="bottom" content_ui="combo" id="Project" order="9" sideWeight="0.32352942" side_tool="true" visible="true" weight="0.16781609" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49778023" weight="0.32873562" />
+      <window_info anchor="bottom" content_ui="combo" id="Project" order="9" sideWeight="0.50499445" side_tool="true" visible="true" weight="0.22528736" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -304,16 +313,30 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main/apps/login_reg_app/views.py</url>
-          <line>80</line>
+          <line>82</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main/apps/login_reg_app/views.py</url>
-          <line>92</line>
-          <option name="timeStamp" value="17" />
+          <line>72</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="request.session['user_logged_in']" language="Python" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>request.session['user_logged_in']</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main/apps/login_reg_app/apps.py">
@@ -338,10 +361,97 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/apps/login_reg_app/templates/login_reg_app/new.html" />
-    <entry file="file://$PROJECT_DIR$/main/apps/login_reg_app/templates/login_reg_app/show_user.html">
+    <entry file="file://C:/Apps/Anaconda3/Lib/site-packages/django/utils/deprecation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="326">
+          <caret line="126" selection-start-line="126" selection-end-line="126" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Apps/Anaconda3/Lib/site-packages/django/core/handlers/exception.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Apps/Anaconda3/Lib/threading.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="860" lean-forward="true" selection-start-line="860" selection-end-line="860" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Apps/Anaconda3/Lib/socketserver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="653" selection-start-line="653" selection-end-line="653" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Apps/Anaconda3/Lib/site-packages/django/core/servers/basehttp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="173" selection-start-line="173" selection-end-line="173" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Apps/Anaconda3/Lib/wsgiref/handlers.py" />
+    <entry file="file://C:/Apps/Anaconda3/Lib/site-packages/django/contrib/staticfiles/handlers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Apps/Anaconda3/Lib/site-packages/django/core/handlers/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="180" selection-start-line="180" selection-end-line="180" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Apps/Anaconda3/Lib/site-packages/django/core/handlers/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3960">
+          <caret line="184" selection-start-line="184" selection-end-line="184" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wireframe.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/apps/login_reg_app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/apps/login_reg_app/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/apps/login_reg_app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="71" column="50" lean-forward="true" selection-start-line="71" selection-start-column="50" selection-end-line="71" selection-end-column="50" />
+          <folding>
+            <element signature="e#432#469#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/apps/login_reg_app/templates/login_reg_app/logged_in.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="17" selection-start-line="17" selection-end-line="20" selection-end-column="15" />
           <folding>
             <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
           </folding>
@@ -350,66 +460,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/apps/login_reg_app/templates/login_reg_app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="21" column="38" lean-forward="true" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+        <state relative-caret-position="192">
+          <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Apps/Anaconda3/Lib/site-packages/django/core/handlers/base.py">
+    <entry file="file://$PROJECT_DIR$/main/apps/login_reg_app/templates/login_reg_app/show_user.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="184" selection-start-line="184" selection-end-line="184" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/apps/login_reg_app/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="18" column="16" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/apps/login_reg_app/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" column="21" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wireframe.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/apps/login_reg_app/templates/login_reg_app/reg_login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="130" column="46" lean-forward="true" selection-start-line="130" selection-start-column="32" selection-end-line="130" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/apps/login_reg_app/templates/login_reg_app/logged_in.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+        <state relative-caret-position="120">
+          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
           <folding>
             <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/apps/login_reg_app/views.py">
+    <entry file="file://$PROJECT_DIR$/main/apps/login_reg_app/templates/login_reg_app/reg_login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="93" column="20" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="20" />
-          <folding>
-            <element signature="e#237#283#0" />
-            <element signature="e#432#469#0" />
-            <element signature="e#1024#1112#0" />
-            <element signature="e#1260#1314#0" />
-            <element signature="e#2430#2508#0" />
-          </folding>
+        <state relative-caret-position="152">
+          <caret line="80" column="67" lean-forward="true" selection-start-line="80" selection-start-column="67" selection-end-line="80" selection-end-column="67" />
         </state>
       </provider>
     </entry>

@@ -15,7 +15,7 @@
 </head>
   <!-- ===================================================================== -->
 <body>
-    <!-- TODO: Add session here stating user is logged in - also add to all other pages - see notepad scratchpad -->
+    <!--If user is logged in then display ndessage -->
     {% if request.session.user_logged_in.logged_in == True %}
         <h1>You are logged in {{request.session.user_logged_in.first_name}}!</h1>
     {% endif %}

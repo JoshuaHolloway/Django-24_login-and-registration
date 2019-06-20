@@ -36,7 +36,7 @@ def register(request):
   last_name = request.POST['last_name']
   email = request.POST['email']
   password_orig = request.POST['password']
-  logged_in = 0
+  # logged_in = 0
 
   # Hash Password
   password_hash = bcrypt.hashpw(password_orig.encode(), bcrypt.gensalt())
@@ -46,8 +46,8 @@ def register(request):
     first_name=first_name,
     last_name=last_name,
     email=email,
-    password_hash=password_hash,
-    logged_in=logged_in)
+    password_hash=password_hash)
+    #logged_in=logged_in)
 
   return redirect("/users")
 # ======================================================================================================================
@@ -69,9 +69,11 @@ def login(request):
   if bcrypt.checkpw(password_login.encode(), user.password_hash.encode()):
     print("password match")
 
-    # TODO: Change logged_in field in database to True
+    # # Change logged_in field in database to True
+    # user.logged_in = 1
+    # user.save()
 
-    # TODO: Set Session with logged-in users info
+    # Set Session with logged-in users info
     request.session['user_logged_in'] = {
       'id': user.id,
       'first_name': user.first_name,
@@ -87,7 +89,10 @@ def login(request):
 # ======================================================================================================================
 def logout(request):
 
-  # TODO: Set logged_in to false in database
+  # # Set logged-in to false in database
+  # user = get_user_info(id)
+  # user.logged_in = 0
+  # user.save()
 
   # Pop session['user_logged_in']
   request.session.pop('user_logged_in')

@@ -26,29 +26,19 @@
   <body>
     <a href="/">Home</a>
 
+    <!--If user is logged in then display ndessage -->
+    {% if request.session.user_logged_in.logged_in == True %}
+        <h1>You are logged in {{request.session.user_logged_in.first_name}}!</h1>
+    {% endif %}
+
     <h2>ID: {{user.id}}</h2>
     <h2>First Name: {{user.first_name}}</h2>
     <h2>Last Name:  {{user.last_name}}</h2>
     <h3>Email: {{user.email}}</h3>
+    <!--<h3>Logged-In: {{user.logged_in}}</h3>-->
 
-    <form action='/books/assign_author/{{book.id}}' method='post'>
-    {% csrf_token %}
-
-      <!-- Drop-down menu -->
-      <div class="form-group">
-        <label for="author">Add Author: </label>
-        <select name="author" id="author" class="form-control">
-
-          {% for author in authors %}
-            <option value={{author.id}}>{{author.name}}</option>
-          {% endfor %}
-        </select>
-      </div>
-
-      <!-- submit-button -->
-      <input type='submit' id="submit-button" value='Submit!' class="form-control"
-        class="shadow-lg p-3 mb-5 bg-white rounded">
-    </form>
+    <!--TODO: Only allow logout if already logged in -->
+    <a href="/users/logout">Log-out</a>
 
   </body>
 </html>
