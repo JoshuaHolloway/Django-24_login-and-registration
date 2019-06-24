@@ -35,15 +35,6 @@ class UsersManager(models.Manager):
           errors["email_in_db"] = "Already registered!"
           break
 
-     # TODO: Change to do the email validation in one of the following ways:
-     #  1. User.objects.get(email=email)
-     #    -If there is not a matching email for a .get(), Django throws an error (try and except could come in handy),
-     #     otherwise it returns the User object associated with the matching user.e.g.Userobject.
-     #  2. User.objects.filter(email = email)
-     #     -Filter, on the other hand, returns a list, so if there is no user that matches,
-     #      it returns an empty list.If there is a single matching user the list will contain a single User object:
-     #      e.g.[Userobject].
-
       return errors
 # ======================================================================================================================
 # Table-1:
